@@ -1,0 +1,52 @@
+.global-bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.global-bg-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  transform: scale(1.1);
+}
+
+.global-bg-slide.active {
+  opacity: 1;
+  animation: kenBurns 12s linear infinite alternate;
+}
+
+@keyframes kenBurns {
+  from {
+    transform: scale(1) translate(0, 0);
+  }
+  to {
+    transform: scale(1.15) translate(-1%, -1%);
+  }
+}
+
+.global-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: -1;
+  backdrop-filter: blur(3px);
+}

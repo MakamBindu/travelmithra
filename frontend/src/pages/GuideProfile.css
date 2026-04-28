@@ -1,0 +1,245 @@
+.guide-profile-page {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  color: var(--text-color);
+  font-weight: 500;
+  margin: 1rem 0 2rem;
+}
+
+.back-btn:hover {
+  color: var(--primary-blue);
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+}
+
+.profile-sidebar {
+  padding: 2rem;
+  text-align: center;
+  height: fit-content;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.profile-sidebar h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  color: #0f172a;
+}
+
+.profile-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.profile-badge-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.badge-pill {
+  background: rgba(59, 130, 246, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.rating-pill {
+  background: rgba(251, 191, 36, 0.1);
+  color: #fbbf24;
+}
+
+.pricing-box {
+  background: var(--glass-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-box h3 {
+  font-size: 2rem;
+  color: var(--primary-green);
+  margin: 0;
+}
+
+.pricing-box span {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.profile-main {
+  padding: 2.5rem;
+}
+
+.profile-main h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-blue);
+}
+
+.profile-bio {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.info-item h4 {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0 0 0.25rem 0;
+}
+
+.info-item p {
+  font-weight: 500;
+  margin: 0;
+}
+
+.text-blue { color: #3b82f6; }
+.text-green { color: #10b981; }
+.text-orange { color: #f97316; }
+.text-purple { color: #8b5cf6; }
+.text-light { color: var(--text-light); }
+.text-center { text-align: center; }
+.mb-2 { margin-bottom: 2rem; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2.5rem; }
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--bg-color);
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 16px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+  color: var(--primary-blue);
+}
+
+.booking-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.booking-form label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.booking-form input, .booking-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.booking-summary {
+  background: var(--glass-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.payment-details {
+  background: var(--glass-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+
+.payment-options {
+  display: flex;
+  gap: 1rem;
+}
+
+.payment-options button {
+  flex: 1;
+}
+
+.btn-cancel {
+  background: none;
+  color: var(--text-light);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.btn-cancel:hover {
+  background: var(--glass-bg);
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+}

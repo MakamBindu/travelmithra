@@ -1,0 +1,390 @@
+.booking-flow-container {
+  padding: 80px 20px;
+  min-height: 90vh;
+}
+
+.booking-progress {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+  position: relative;
+  padding: 0 10px;
+}
+
+.booking-progress::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: var(--border-color);
+  z-index: 0;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  flex: 1;
+  position: relative;
+}
+
+.step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1e293b; /* Ensure solid background to prevent overlap transparency */
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.progress-step.active .step-num {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+  background: rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.progress-step.completed .step-num {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: white;
+}
+
+.step-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.progress-step.active .step-label {
+  color: var(--primary-blue);
+}
+
+.booking-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.step-view h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.step-view .subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+}
+
+.selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.selection-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.selection-card:hover {
+  border-color: var(--primary-blue);
+  transform: translateY(-5px);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.selection-card svg {
+  color: var(--primary-blue);
+}
+
+.selection-card span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.btn-back {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.btn-back:hover {
+  color: var(--primary-blue);
+}
+
+.step-header h2 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.places-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.place-card {
+  display: flex;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.place-card:hover {
+  border-color: var(--primary-blue);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.place-card img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.place-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.place-info h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.place-info p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.place-info .address {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+.datetime-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.datetime-form .form-group {
+  margin-bottom: 2rem;
+}
+
+.datetime-form label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.datetime-form input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.datetime-form .btn-primary {
+  width: 100%;
+  padding: 1.25rem;
+  font-size: 1.1rem;
+  justify-content: center;
+}
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.guide-match-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.guide-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.guide-header img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.guide-meta h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.rating {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.guide-details p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.availability {
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  margin-top: 0.75rem !important;
+}
+
+.guide-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.guide-actions button {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.summary-card {
+  background: rgba(59, 130, 246, 0.03);
+  border: 1px dashed var(--primary-blue);
+  border-radius: 24px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.summary-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.summary-item svg {
+  color: var(--primary-blue);
+  margin-top: 4px;
+}
+
+.summary-item label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.summary-item p {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.price-summary {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.price-row.total {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+.confirmation-actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmation-actions .btn-primary {
+  min-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .booking-content {
+    padding: 1.5rem;
+  }
+  .place-card {
+    flex-direction: column;
+  }
+  .place-card img {
+    width: 100%;
+    height: 200px;
+  }
+  .confirmation-actions {
+    flex-direction: column-reverse;
+  }
+  .confirmation-actions button {
+    width: 100%;
+  }
+}

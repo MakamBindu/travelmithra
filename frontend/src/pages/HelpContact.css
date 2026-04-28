@@ -1,0 +1,165 @@
+.help-contact-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+}
+
+.help-header {
+  text-align: center;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  background: var(--glass-bg);
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+}
+
+.help-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  margin: 0;
+}
+
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+}
+
+.search-bar button {
+  border-radius: 30px;
+  padding: 0 1.5rem;
+}
+
+/* FAQ Styles */
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.faq-answer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+/* Contact Styles */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.contact-info {
+  padding: 2rem;
+  height: fit-content;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.info-item p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.contact-form-container {
+  padding: 2.5rem;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+}
+
+.text-blue { color: #3b82f6; }
+.text-green { color: #10b981; }
+.text-orange { color: #f97316; }
+
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
